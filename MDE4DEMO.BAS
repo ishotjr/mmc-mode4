@@ -3,7 +3,7 @@
 I2C open 400,100                          ' open I2C comm channel
 PC = &h42                                 '
 I2C write PC,0,3,1,2,4                    ' Switch to mode4.mde
-Do While Asc($) <> 42 : a$=Inkey$ : Loop  ' wait for mode switch
+Do While Asc(a$) <> 42 : a$=Inkey$ : Loop  ' wait for mode switch
 
 LoadResource "demo.spr",180
 LoadSpr 1,4,100,175,0,0
